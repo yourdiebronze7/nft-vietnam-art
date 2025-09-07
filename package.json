@@ -1,6 +1,6 @@
 {
   "name": "nft-vietnam-art",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Một nền tảng cho nghệ sĩ Việt Nam phát hành NFT",
   "main": "index.js",
   "scripts": {
