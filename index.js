@@ -13,7 +13,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.error('Failed to connect to MongoDB:', err));
 
 app.get('/', (req, res) => {
-  res.send('Chào mừng đến với NFT Vietnam Art!');
+  res.send('Chào mừng đến với NFT Việt Nam Art!');
 });
 
 app.listen(port, () => {
