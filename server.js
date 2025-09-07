@@ -9,7 +9,8 @@ app.use(express.json());
 app.use('/api/nfts', nftRoutes);
 
 // Database connection
-mongoose.connect('mongodb://localhost/nft-vietnam-art', { useNewUrlParser: true, useUnifiedTopology: true })
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/nft-vietnam-art';
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Kết nối tới MongoDB thành công!'))
   .catch(err => console.error('Kết nối tới MongoDB thất bại:', err));
 
