@@ -7,7 +7,8 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 // Database connection
-mongoose.connect('mongodb://localhost/nft-vietnam-art', { useNewUrlParser: true, useUnifiedTopology: true })
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/nft-vietnam-art';
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Kết nối tới MongoDB thành công!'))
   .catch(err => console.error('Kết nối tới MongoDB thất bại:', err));
 
