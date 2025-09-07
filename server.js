@@ -11,9 +11,9 @@ app.use('/api/nfts', nftRoutes);
 // Database connection
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/nft-vietnam-art';
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Kết nối tới MongoDB thành công!'))
-  .catch(err => console.error('Kết nối tới MongoDB thất bại:', err));
+  .then(() => console.log('Connected to MongoDB successfully!'))
+  .catch(err => console.error('Failed to connect to MongoDB:', err));
 
 app.listen(port, () => {
-  console.log(`Máy chủ chạy trên cổng ${port}`);
+  console.log(`Server running on port ${port}`);
 });
