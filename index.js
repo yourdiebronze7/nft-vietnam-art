@@ -9,8 +9,8 @@ app.use(express.json());
 // Database connection
 const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/nft-vietnam-art';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Kết nối tới MongoDB thành công!'))
-  .catch(err => console.error('Kết nối tới MongoDB thất bại:', err));
+  .then(() => console.log('Connected to MongoDB successfully!'))
+  .catch(err => console.error('Failed to connect to MongoDB:', err));
 
 app.get('/', (req, res) => {
   res.send('Chào mừng đến với NFT Vietnam Art!');
